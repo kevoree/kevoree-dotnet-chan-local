@@ -2,10 +2,11 @@
 using Org.Kevoree.Annotation;
 using Org.Kevoree.Core.Api;
 
-namespace kevoreedotnetchannellocal
+namespace Org.Kevoree.Channel.Local
 {
 	[ChannelType]
-	public class LocalChannel:ChannelDispatch
+    [Serializable]
+    public class LocalChannel : MarshalByRefObject, DeployUnit, ChannelDispatch
 	{
 		[KevoreeInject]
 		private ChannelContext channelContext;

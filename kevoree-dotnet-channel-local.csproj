@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{96E6CA0F-6B90-41B0-B13E-29CF72CF696A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Org.Kevoree.Channel</RootNamespace>
+    <RootNamespace>Org.Kevoree.Channel.Local</RootNamespace>
     <AssemblyName>LocalChannel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
@@ -28,12 +28,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Core.Api">
-      <HintPath>packages\org-kevoree-api.1.1.0\lib\net40\Core.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="Annotation">
-      <HintPath>packages\org-kevoree-annotation.2.0.0\lib\net40\Annotation.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -42,5 +36,15 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\kevoree-dotnet-annotation\Annotation.csproj">
+      <Project>{ad3c2f49-5c3b-46d3-a283-600fe11a0aa1}</Project>
+      <Name>Annotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\kevoree-dotnet-core-api\Api.csproj">
+      <Project>{ad3c2f49-5c3b-46d3-a283-600fe11a0aa2}</Project>
+      <Name>Api</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
