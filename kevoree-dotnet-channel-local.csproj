@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{96E6CA0F-6B90-41B0-B13E-29CF72CF696A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Org.Kevoree.Channel.Local</RootNamespace>
-    <AssemblyName>LocalChannel</AssemblyName>
+    <RootNamespace>Org.Kevoree.Library</RootNamespace>
+    <AssemblyName>Org.Kevoree.Library.LocalChannel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -21,7 +21,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\..\..\Desktop\package_solution\LocalChannel\5.0.2\plugin\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>

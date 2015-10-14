@@ -2,7 +2,7 @@
 using Org.Kevoree.Annotation;
 using Org.Kevoree.Core.Api;
 
-namespace Org.Kevoree.Channel.Local
+namespace Org.Kevoree.Library
 {
 	[ChannelType]
     [Serializable]
