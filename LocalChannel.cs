@@ -7,17 +7,16 @@ namespace Org.Kevoree.Library
 {
 	[ChannelType]
     [Serializable]
-    public class LocalChannel : MarshalByRefObject, DeployUnit, ChannelDispatch
+    public class LocalChannel : MarshalByRefObject, DeployUnit, ChannelPort
 	{
-	    private List<Port> _inputPorts = new List<Port>();
+	    private readonly List<Port> _inputPorts = new List<Port>();
 
 		public LocalChannel ()
 		{
 		}
 
-		#region ChannelDispatch implementation
-
-		void ChannelDispatch.dispatch (string payload, Callback callback)
+        [Dispatch]
+		public void dispatch (string payload, Callback callback)
 		{
 			foreach (var p in _inputPorts) {
 				p.send (payload, callback);
@@ -25,16 +24,17 @@ namespace Org.Kevoree.Library
 
 		}
 
-	    public void registerPort(Port p)
+
+
+	    public void addInputPort(Port p)
 	    {
 	        this._inputPorts.Add(p);
 	    }
 
-	    public void removePort(Port p)
+	    public void removeInputPort(Port p)
 	    {
 	        this._inputPorts.Remove(p);
 	    }
 
-	    #endregion
 	}
 }
