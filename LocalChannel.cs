@@ -24,8 +24,6 @@ namespace Org.Kevoree.Library
 
 		}
 
-
-
 	    public void addInputPort(Port p)
 	    {
 	        this._inputPorts.Add(p);
@@ -35,6 +33,16 @@ namespace Org.Kevoree.Library
 	    {
 	        this._inputPorts.Remove(p);
 	    }
+
+        public void addRemoteInputPort(Port p)
+        {
+
+        }
+
+        public void removeRemoteInputPort(Port p)
+        {
+
+        }
 
 	}
 }
