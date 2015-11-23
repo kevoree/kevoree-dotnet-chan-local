@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using Org.Kevoree.Annotation;
 using Org.Kevoree.Core.Api;
+using System.ComponentModel.Composition;
 
 namespace Org.Kevoree.Library
 {
 	[ChannelType]
     [Serializable]
+    [Export(typeof(Org.Kevoree.Annotation.DeployUnit))]
     public class LocalChannel : MarshalByRefObject, DeployUnit, ChannelPort
 	{
 	    private readonly List<Port> _inputPorts = new List<Port>();
